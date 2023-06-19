@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MODAVO - Serviços de Comunicação</title>
+  <style>
+    /* Estilos gerais */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+
+    /* Estilos do cabeçalho */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Estilos da seção hero */
+    section#hero {
+      background-image: url("hero-background.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    section#hero .hero-content {
+      text-align: center;
+    }
+
+    section#hero .hero-content h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px white(0, 0, 0, 0.8);
+    }
+
+    section#hero .hero-content p {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff5c5c;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #ff3b3b;
+      transform: scale(1.05);
+    }
+
+    /* Estilos da seção de serviços */
+    section#serviços {
+      padding: 40px 0;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .service {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .service img {
+      width: 100px;
+      margin-right: 20px;
+    }
+
+    /* Estilos do formulário de cotação */
+    section#cotação {
+      padding: 40px 0;
+    }
+
+    section#cotação h2 {
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+
+    form input,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+
+    form button[type="submit"] {
+      grid-column: span 2;
+      background-color: #ff5c5c;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      font-weight: bold;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    form button[type="submit"]:hover {
+      background-color: #ff3b3b;
+      transform: scale(1.05);
+    }
+
+    /* Estilos da seção de contato */
+    section#contato {
+      padding: 40px 0;
+      background-color: #333;
+      color: #fff;
+    }
+
+    section#contato h2 {
+      margin-bottom: 20px;
+    }
+
+    section#contato ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    section#contato ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Estilos do rodapé */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="paginas/tellecal.html">LOGIN</a></li>
+        <li><a href="paginas/tellecall felipe, larissa e daniella.html">CADASTRO</a></li>
+        <li><a href="#contato">SOBRE NÓS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1>MODAVO</h1>
+      <p>Soluções de comunicação para empresas</p>
+      <a href="https://drive.google.com/file/d/1GQHpb9yKLN6ZAf_qPxJwP_0JOM4Emkyy/view?usp=drive_link" class="cta-button">CONHEÇA NOSSO PORTFÓLIO</a>
+    </div>
+  </section>
+
+  <section id="serviços">
+    <div class="container">
+      <h2>Nossos Serviços</h2>
+
+      <div class="service">
+        <img src="IMG/ac088af7-a3ad-4113-8af3-e90d6fd1ae98.png" alt="CPaaS Icon">
+        <div>
+          <h3>CPaaS - Comunicação como Serviço</h3>
+          <p>O CPaaS é uma plataforma de comunicação em nuvem que oferece uma variedade de recursos para impulsionar a comunicação e a colaboração em sua empresa. Com o CPaaS, você pode aproveitar serviços como envio de SMS, chamadas de voz, videochamadas e muito mais, tudo integrado perfeitamente em seus aplicativos e sistemas existentes.</p>
+        </div>
+      </div>
+
+    
+  </section>
+
+  <section id="cotação">
+    <div class="container">
+      <h2>Pedido de Cotação</h2>
+      <p>Preencha o formulário abaixo para solicitar uma cotação personalizada para os serviços CPaaS e Telecal em sua empresa:</p>
+
+      <form>
+        <input type="text" placeholder="Nome da Empresa" required>
+        <input type="text" placeholder="Nome do Contato" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Telefone" required>
+        <textarea placeholder="Informações adicionais" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <p>Para mais informações ou dúvidas sobre nossos serviços, entre em contato conosco através dos seguintes meios:</p>
+      
+      <ul>
+        <li>Email: info@cpaas-telecal.com</li>
+        <li>Telefone: +55 123456789</li>
+        <li>Endereço: Av. Exemplo, 123, Cidade, Estado</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 CPaaS e Telecal. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
+

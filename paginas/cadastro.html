@@ -1,0 +1,240 @@
+<!-- Início do documento HTML -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CADASTRO MODAVO</title>
+
+    <!-- Estilos CSS -->
+    <style>
+        /* Estilos para o corpo da página */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+        }
+
+        /* Estilos para a caixa de formulário */
+        .box {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            border-radius: 15px;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Estilos para o campo de formulário */
+        .inputbox {
+            position: relative;
+        }
+
+        /* Estilos para o campo de entrada de usuário */
+        .inputUser {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+
+        /* Estilos para o rótulo do campo de entrada */
+        .labelinput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        /* Estilos para o rótulo do campo de entrada quando está focado ou preenchido */
+        .inputUser:focus~.labelinput,
+        .inputUser:valid~.labelinput {
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+
+        /* Estilos para o botão de envio */
+        #submit {
+            background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        /* Estilos para o botão de envio quando passa o mouse por cima */
+        #submit:hover {
+            background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(80, 19, 195));
+        }
+
+        /* Estilos para a mensagem de sucesso ou erro */
+        .message {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        /* Estilos para a mensagem de sucesso */
+        .success {
+            background-color: green;
+        }
+
+        /* Estilos para a mensagem de erro */
+        .error {
+            background-color: red;
+        }
+
+        /* Estilos para o botão de fechar mensagem */
+        .close-btn {
+            color: white;
+            float: right;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<!-- Corpo da página -->
+<body>
+    <div class="box">
+        <!-- Formulário de cadastro -->
+        <form onsubmit="return validateForm()">
+            <fieldset>
+                <legend><b>Cadastro</b></legend>
+                <br><br>
+                <!-- Campo de nome de usuário -->
+                <div class="inputbox">
+                    <input type="text" name="Login" id="Login" class="inputUser" required>
+                    <label for="Login" class="labelinput">Crie seu nome de usuário</label>
+                </div>
+                <br><br>
+                <!-- Campo de senha -->
+                <div class="inputbox">
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelinput">Crie sua senha:</label>
+                </div>
+                <br><br>
+                <!-- Campo de nome completo -->
+                <div class="inputbox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelinput">Nome completo</label>
+                </div>
+                <p>Sexo:</p>
+                <!-- Opções de sexo -->
+                <input type="radio" id="feminino" name="sexo" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <br>
+                <input type="radio" id="masculino" name="sexo" value="masculino" required>
+                <label for="masculino">Masculino</label>
+                <br>
+                <input type="radio" id="outros" name="sexo" value="outros" required>
+                <label for="outros">Outros</label>
+                <br><br>
+                <!-- Campo de data de nascimento -->
+                <div class="inputbox">
+                    <label for="datanascimento" class="labelinput">Data de nascimento:</label>
+                    <br><br>
+                    <input type="date" name="datanascimento" id="datanascimento" class="inputUser" required>
+                </div>
+                <br><br>
+                <!-- Campo de e-mail -->
+                <div class="inputbox">
+                    <input type="email" name="Email" id="Email" class="inputUser" required>
+                    <label for="Email" class="labelinput">Email</label>
+                </div>
+                <br><br>
+                <!-- Campo de CPF -->
+                <div class="inputbox">
+                    <input type="text" name="CPF" id="CPF" class="inputUser" required>
+                    <label for="CPF" class="labelinput">CPF</label>
+                </div>
+                <br><br>
+                <!-- Campo de nome da mãe -->
+                <div class="inputbox">
+                    <input type="text" name="Nome da mãe" id="Nome da mãe" class="inputUser" required>
+                    <label for="Nome da mãe" class="labelinput">Nome da mãe</label>
+                </div>
+                <br><br>
+                <!-- Campo de endereço -->
+                <div class="inputbox">
+                    <input type="text" name="Endereço" id="Endereço" class="inputUser" required>
+                    <label for="Endereço" class="labelinput">Endereço</label>
+                </div>
+                <br><br>
+                <!-- Campo de telefone fixo -->
+                <div class="inputbox">
+                    <input type="text" name="Telefone Fixo" id="Telefone Fixo" class="inputUser" required>
+                    <label for="Telefone Fixo" class="labelinput">Telefone Fixo</label>
+                </div>
+                <br><br>
+                <!-- Campo de celular -->
+                <div class="inputbox">
+                    <input type="tel" name="celular" id="celular" class="inputUser" required>
+                    <label for="celular" class="labelinput">Celular</label>
+                </div>
+                <br><br>
+                <!-- Botão de envio do formulário -->
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+
+        <!-- Mensagem de sucesso -->
+        <div class="message success" id="success-message">
+            Cadastro realizado com sucesso!
+            <span class="close-btn" onclick="closeMessage(this.parentNode)">&times;</span>
+        </div>
+
+        <!-- Mensagem de erro -->
+        <div class="message error" id="error-message">
+            Erro ao realizar o cadastro. Por favor, tente novamente.
+            <span class="close-btn" onclick="closeMessage(this.parentNode)">&times;</span>
+        </div>
+    </div>
+
+    <!-- Scripts JavaScript -->
+    <script>
+        // Função para validar o formulário
+        function validateForm() {
+            // Aqui você pode adicionar a lógica de validação do formulário
+
+            // Exemplo de exibição da mensagem de sucesso
+            showSuccessMessage();
+
+            // Exemplo de exibição da mensagem de erro
+            // showErrorMessage();
+
+            return false; // Retorna false para impedir o envio do formulário
+        }
+
+        // Função para exibir a mensagem de sucesso
+        function showSuccessMessage() {
+            var successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+        }
+
+        // Função para exibir a mensagem de erro
+        function showErrorMessage() {
+            var errorMessage = document.getElementById('error-message');
+            errorMessage.style.display = 'block';
+        }
+
+        // Função para fechar a mensagem
+        function closeMessage(message) {
+            message.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
+<!-- Fim do documento HTML -->
